@@ -41,40 +41,24 @@ a {
 
 /* fondo de la pagina de medidas*/
 #fondo_medidas {
-  background-image: url(../image/header/fondo2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../image/header/fondo2.svg); }
 
 /* fondo de la pagina nosotros*/
 #fondo_nosotros {
-  background-image: url(../image/header/fondo3.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../image/header/fondo3.svg); }
 
 /* fondo de la pagina de promociones*/
 #fondo_promociones {
-  background-image: url(../image/header/fondo4.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../image/header/fondo4.svg); }
 
 /* fondo de la pagina de servicios*/
 #fondo_servicios {
-  background-image: url(../image/header/fondo5.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-
-/* fondo de todos los textos */
-p {
-  background-color: rgba(190, 190, 190, 0.589); }
+  background-image: url(../image/header/fondo5.svg); }
 
 /* header, logo y banner */
 .gridBanner {
   display: grid;
-  grid-template-columns: 60%;
+  grid-template-columns: 70%;
   grid-template-rows: auto;
   grid-template-areas: "banner";
   justify-items: stretch;
@@ -160,7 +144,10 @@ p {
   grid-template-rows: auto;
   grid-template-areas: "redes textos textos disenador";
   justify-items: stretch;
-  justify-content: stretch; }
+  justify-content: stretch;
+  /* fondo de todos los textos */ }
+  .gridFooter p {
+    background-color: rgba(190, 190, 190, 0.589); }
   .gridFooter .redes {
     grid-area: redes;
     background: #bebebe;
@@ -215,7 +202,10 @@ p {
   grid-template-rows: auto;
   grid-template-areas: "titulo titulo" "instalaciones fotoInstalaciones"  "fletes fotoFlete" "camaras fotoCamaras" "seguro fotoSeguro";
   justify-items: auto;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  /* fondo de todos los textos */ }
+  .gridServicios p {
+    background-color: rgba(190, 190, 190, 0.589); }
   .gridServicios .textosServicios {
     grid-area: instalaciones fletes camaras seguros;
     display: flex;
@@ -242,15 +232,27 @@ p {
     grid-area: fotoInstalaciones fotoFlete fotoCamaras fotoSeguro;
     justify-self: center;
     align-self: center; }
-  .gridServicios #promoBoton {
+  .gridServicios #promoBoton, .gridServicios #promoBoton2 {
     grid-area: titulo;
     /* ejemplo de mixin*/
     font-family: "Ubuntu";
-    font-size: 7vh;
+    font-size: 5vh;
+    color: white;
     font-weight: bold;
     text-align: center;
+    justify-self: auto;
+    background-color: #d34444;
+    border-radius: 20px;
+    border-style: groove;
     margin-top: 12vh;
     margin-bottom: 10vh; }
+  .gridServicios #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    background-color: #357753;
+    padding-top: 1vh;
+    padding-bottom: 1vh; }
 
 /* este grid y caracteristicas esta siendo utilizado en la pagina Nosotros */
 .gridNosotros {
@@ -259,7 +261,10 @@ p {
   grid-template-rows: auto;
   grid-template-areas: "titulo titulo" "texto mapa";
   justify-items: auto;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  /* fondo de todos los textos */ }
+  .gridNosotros p {
+    background-color: rgba(190, 190, 190, 0.589); }
   .gridNosotros .textos_nosotros {
     grid-area: texto;
     display: flex;
@@ -275,15 +280,27 @@ p {
     margin-bottom: 3vh;
     justify-self: center;
     align-self: center; }
-  .gridNosotros #promoBoton {
+  .gridNosotros #promoBoton, .gridNosotros #promoBoton2 {
     grid-area: titulo;
     /* ejemplo de mixin*/
     font-family: "Ubuntu";
-    font-size: 7vh;
+    font-size: 5vh;
+    color: white;
     font-weight: bold;
     text-align: center;
+    justify-self: auto;
+    background-color: #d34444;
+    border-radius: 20px;
+    border-style: groove;
     margin-top: 12vh;
     margin-bottom: 10vh; }
+  .gridNosotros #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    background-color: #357753;
+    padding-top: 1vh;
+    padding-bottom: 1vh; }
 
 /* este grid y caracteristicas se utilizan en la pagina Promos */
 .gridPromo {
@@ -292,7 +309,10 @@ p {
   grid-template-rows: auto;
   grid-template-areas: "titulo titulo" "texto50 img50" "texto40 img40" "texto30 img30";
   justify-items: auto;
-  justify-content: space-around; }
+  justify-content: space-around;
+  /* fondo de todos los textos */ }
+  .gridPromo p {
+    background-color: rgba(190, 190, 190, 0.589); }
   .gridPromo .textosPromo {
     grid-area: texto50 texto40 texto30;
     display: flex;
@@ -310,15 +330,27 @@ p {
     margin-bottom: 3vh;
     justify-self: center;
     align-self: center; }
-  .gridPromo #promoBoton {
+  .gridPromo #promoBoton, .gridPromo #promoBoton2 {
     grid-area: titulo;
     /* ejemplo de mixin*/
     font-family: "Ubuntu";
-    font-size: 7vh;
+    font-size: 5vh;
+    color: white;
     font-weight: bold;
     text-align: center;
+    justify-self: center;
+    background-color: #d34444;
+    border-radius: 20px;
+    border-style: groove;
     margin-top: 12vh;
     margin-bottom: 10vh; }
+  .gridPromo #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    background-color: #357753;
+    padding-top: 1vh;
+    padding-bottom: 1vh; }
 
 /* este grid y caracteristicas de textos es utilizado en la pagina de Contacto */
 .gridContacto {
@@ -362,15 +394,27 @@ p {
       font-size: 3vh;
       font-weight: bold;
       text-align: center; }
-  .gridContacto #promoBoton {
+  .gridContacto #promoBoton, .gridContacto #promoBoton2 {
     grid-area: titulo;
     /* ejemplo de mixin*/
     font-family: "Ubuntu";
-    font-size: 7vh;
+    font-size: 5vh;
+    color: white;
     font-weight: bold;
     text-align: center;
+    justify-self: auto;
+    background-color: #d34444;
+    border-radius: 20px;
+    border-style: groove;
     margin-top: 12vh;
     margin-bottom: 10vh; }
+  .gridContacto #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    background-color: #357753;
+    padding-top: 2vh;
+    padding-bottom: 2vh; }
 
 /* Media Queries*/
 @media only screen and (max-width: 1200px) {
@@ -420,14 +464,15 @@ p {
       margin-right: 1vh;
       justify-self: center;
       align-self: center; }
-    .gridNosotros #promoBoton {
+    .gridNosotros #promoBoton, .gridNosotros #promoBoton2 {
       margin-top: 4vh;
       margin-bottom: 4vh;
-      justify-content: center; }
+      justify-content: center;
+      background-size: contain; }
   .gridProductos #productos, .gridProductos .gridPromociones #promociones, .gridPromociones .gridProductos #promociones {
     /* ejemplo de mixin*/
     font-family: "Ubuntu";
-    font-size: 3vh;
+    font-size: 2vh;
     margin-top: 4vh;
     margin-bottom: 4vh; }
   /* promociones*/
@@ -438,7 +483,7 @@ p {
       margin-bottom: 4vh;
       /* ejemplo de mixin*/
       font-family: "Ubuntu";
-      font-size: 3vh; }
+      font-size: 2vh; }
   .gridPromo {
     grid-template-columns: 60%;
     grid-template-areas: "titulo" "texto50" "img50" "texto40" "img40" "texto30" "img30";
@@ -451,11 +496,10 @@ p {
       padding-top: 0;
       margin-bottom: 0;
       padding-bottom: 10vh; }
-    .gridPromo #promoBoton {
-      margin-top: 1vh;
-      margin-bottom: 3vh;
-      justify-content: center;
-      width: auto; }
+    .gridPromo #promoBoton, .gridPromo #promoBoton2 {
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+      justify-content: center; }
   .gridServicios {
     grid-template-columns: 90%;
     grid-template-areas: "titulo" "instalaciones" "fotoInstalaciones"  "fletes" "fotoFlete" "camaras" "fotoCamaras" "seguro" "fotoSeguro"; }
@@ -469,11 +513,11 @@ p {
       font-size: 2vh; }
     .gridServicios #fotoServicios {
       margin-bottom: 7vh; }
-    .gridServicios #promoBoton {
-      margin-top: 2vh;
+    .gridServicios #promoBoton, .gridServicios #promoBoton2 {
+      margin-top: 4vh;
       margin-bottom: 4vh;
       justify-content: center;
-      width: auto; }
+      background-size: contain; }
   .gridContacto .contacto {
     margin-bottom: 10px;
     background-image: url(../image/header/naranja2.svg);
@@ -482,11 +526,11 @@ p {
       font-size: 2vh; }
     .gridContacto .contacto .input__borrar {
       font-size: 2vh; }
-  .gridContacto #promoBoton {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+  .gridContacto #promoBoton, .gridContacto #promoBoton2 {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
     justify-content: center;
-    width: auto; }
+    background-size: contain; }
   /* mediaqueries imagen fondo de la pagina Index */
   #fondo_index, #fondo_medidas, #fondo_nosotros, #fondo_promociones, #fondo_servicios {
     background-image: url(../image/header/fondoMediaQueries2.svg); }
@@ -513,4 +557,24 @@ p {
     display: none; }
   .gridBanner {
     grid-template-columns: 95%;
-    justify-content: space-around; } }
+    justify-content: space-around; }
+  .gridNosotros #promoBoton, .gridNosotros #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    padding: 1vh 1vh 1vh 1vh; }
+  .gridPromo #promoBoton, .gridPromo #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    padding: 1vh 1vh 1vh 1vh; }
+  .gridServicios #promoBoton, .gridServicios #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    padding: 1vh 1vh 1vh 1vh; }
+  .gridContacto #promoBoton, .gridContacto #promoBoton2 {
+    /* ejemplo de mixin*/
+    font-family: "ubuntu";
+    font-size: 3vh;
+    padding: 1vh 1vh 1vh 1vh; } }

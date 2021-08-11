@@ -34,55 +34,40 @@ a{
 /* fondo de la pagina de medidas*/
 #fondo_medidas{
     @extend #fondo_index;
-    background-image: $imagenFondo_dos;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
+    background-image: $imagenFondo_dos;    
 }
 
 /* fondo de la pagina nosotros*/
 #fondo_nosotros{
     @extend #fondo_index;
-    background-image: $imagenFondo_tres;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
+    background-image: $imagenFondo_tres;    
 }
 
 /* fondo de la pagina de promociones*/
 #fondo_promociones{
     @extend #fondo_index;
-    background-image: $imagenFondo_cuatro;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
+    background-image: $imagenFondo_cuatro;   
 }
 
 /* fondo de la pagina de servicios*/
 #fondo_servicios{
     @extend #fondo_index;
-    background-image: $imagenFondo_cinco;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
+    background-image: $imagenFondo_cinco;    
 }
 
-/* fondo de todos los textos */
-p{
-    background-color: rgba(190, 190, 190, 0.589);    
-}
 
 /* header, logo y banner */
+
 .gridBanner{
     display: grid;
-    grid-template-columns: 60%;
+    grid-template-columns: 70%;
     grid-template-rows: auto;
     grid-template-areas:"banner";
     justify-items:stretch;
     justify-content:space-around;
 
     #banner{
-    grid-area: banner;        
+    grid-area: banner;          
     height:auto;
     width:auto;
     }
@@ -121,8 +106,11 @@ p{
         } 
     }   
 }
+
 /* titulos e imagenes del main y section del INDEX */
+
 /* servicios y pagina nosotros*/
+
 .gridProductos{
     display: grid;
     grid-template-columns: 90%;
@@ -171,6 +159,11 @@ p{
     grid-template-areas:"redes textos textos disenador";
     justify-items:stretch;
     justify-content:stretch;
+
+    /* fondo de todos los textos */
+    p{
+        background-color: rgba(190, 190, 190, 0.589);    
+    }
 
     .redes{
         grid-area: redes;        
@@ -239,6 +232,11 @@ p{
     justify-items:auto;
     justify-content: space-evenly;
 
+    /* fondo de todos los textos */
+    p{
+        background-color: rgba(190, 190, 190, 0.589);    
+    }
+
     .textosServicios{
     grid-area:instalaciones fletes camaras seguros;
     display:flex;
@@ -271,12 +269,25 @@ p{
     }
     #promoBoton{
         grid-area: titulo;
-        @include propiedadesTexto("Ubuntu", 7vh);
+        @include propiedadesTexto("Ubuntu", 5vh);
+        color: white;        
         font-weight: bold;
-        text-align: center;        
+        text-align: center;
+        justify-self:auto; 
+        background-color:rgb(211, 68, 68);
+        border-radius: 20px;
+        border-style:groove;       
         margin-top:12vh;
-        margin-bottom:10vh;      
-    }                      
+        margin-bottom:10vh;
+            
+    }
+    #promoBoton2{
+        @extend #promoBoton;
+        @include propiedadesTexto("ubuntu", 3vh );
+        background-color:rgb(53, 119, 83); 
+        padding-top: 1vh; 
+        padding-bottom: 1vh;
+    }                                      
 }
 
 /* este grid y caracteristicas esta siendo utilizado en la pagina Nosotros */
@@ -288,6 +299,11 @@ p{
                         "texto mapa";    
     justify-items:auto;
     justify-content: space-evenly;
+
+    /* fondo de todos los textos */
+    p{
+        background-color: rgba(190, 190, 190, 0.589);    
+    }
 
     .textos_nosotros{
         grid-area: texto;
@@ -308,12 +324,25 @@ p{
     }
     #promoBoton{
         grid-area: titulo;
-        @include propiedadesTexto("Ubuntu", 7vh);
+        @include propiedadesTexto("Ubuntu", 5vh);
+        color: white;        
         font-weight: bold;
-        text-align: center;        
+        text-align: center;
+        justify-self:auto; 
+        background-color:rgb(211, 68, 68);
+        border-radius: 20px;
+        border-style:groove;       
         margin-top:12vh;
-        margin-bottom:10vh;      
+        margin-bottom:10vh;
+            
     }
+    #promoBoton2{
+        @extend #promoBoton;
+        @include propiedadesTexto("ubuntu", 3vh );
+        background-color:rgb(53, 119, 83);
+        padding-top: 1vh; 
+        padding-bottom: 1vh; 
+    }                 
        
 }
 
@@ -328,6 +357,11 @@ p{
                         "texto30 img30";    
     justify-items: auto;
     justify-content: space-around;
+
+    /* fondo de todos los textos */
+    p{
+        background-color: rgba(190, 190, 190, 0.589);    
+    }
     .textosPromo{
         grid-area:texto50 texto40 texto30;
         display:flex;
@@ -350,11 +384,24 @@ p{
     }
     #promoBoton{
         grid-area: titulo;
-        @include propiedadesTexto("Ubuntu", 7vh);
+        @include propiedadesTexto("Ubuntu", 5vh);
+        color: white;        
         font-weight: bold;
-        text-align: center;        
+        text-align: center;
+        justify-self: center; 
+        background-color:rgb(211, 68, 68);
+        border-radius: 20px;
+        border-style:groove;       
         margin-top:12vh;
-        margin-bottom:10vh;      
+        margin-bottom:10vh;
+            
+    }
+    #promoBoton2{
+        @extend #promoBoton;
+        @include propiedadesTexto("ubuntu", 3vh );
+        background-color:rgb(53, 119, 83);
+        padding-top: 1vh; 
+        padding-bottom: 1vh; 
     }                 
 }
 
@@ -409,13 +456,27 @@ p{
     }
     #promoBoton{
         grid-area: titulo;
-        @include propiedadesTexto("Ubuntu", 7vh);
+        @include propiedadesTexto("Ubuntu", 5vh);
+        color: white;        
         font-weight: bold;
-        text-align: center;        
+        text-align: center;
+        justify-self:auto; 
+        background-color:rgb(211, 68, 68);
+        border-radius: 20px;
+        border-style:groove;       
         margin-top:12vh;
-        margin-bottom:10vh;      
-    }   
-}
+        margin-bottom:10vh;
+            
+    }
+    #promoBoton2{
+        @extend #promoBoton;
+        @include propiedadesTexto("ubuntu", 3vh );
+        background-color:rgb(53, 119, 83);
+        padding-top: 2vh; 
+        padding-bottom: 2vh;
+    }
+}   
+
 
 
 /* Media Queries*/ 
@@ -494,12 +555,13 @@ p{
         #promoBoton{              
             margin-top:4vh;
             margin-bottom:4vh;
-            justify-content: center;      
+            justify-content: center;
+            background-size: contain;      
         }
     }
     .gridProductos{
         #productos{
-            @include propiedadesTexto("Ubuntu", 3vh);
+            @include propiedadesTexto("Ubuntu", 2vh);
             margin-top:4vh;
             margin-bottom:4vh;                  
         }
@@ -511,7 +573,7 @@ p{
         #promociones{            
             margin-top: 4vh;
             margin-bottom: 4vh;
-            @include propiedadesTexto("Ubuntu", 3vh);                   
+            @include propiedadesTexto("Ubuntu", 2vh);                   
         }
     }
     .gridPromo{        
@@ -536,10 +598,10 @@ p{
             padding-bottom: 10vh;         
         }
         #promoBoton{        
-            margin-top:1vh;
-            margin-bottom:3vh;
+            margin-top:4vh;
+            margin-bottom:4vh;
             justify-content: center;
-            width: auto;            
+                      
         }                 
     }
     .gridServicios{
@@ -568,10 +630,10 @@ p{
             margin-bottom: 7vh;     
         }
         #promoBoton{      
-            margin-top:2vh;
+            margin-top:4vh;
             margin-bottom:4vh;
-            justify-content: center; 
-            width: auto;     
+            justify-content: center;
+            background-size: contain;     
         }                      
     }
     .gridContacto{
@@ -588,10 +650,10 @@ p{
                 }
         }
         #promoBoton{
-            margin-top:2vh;
-            margin-bottom:2vh;
+            margin-top:4vh;
+            margin-bottom:4vh;
             justify-content: center;
-            width: auto;
+            background-size: contain;   
         }   
     }
 
@@ -627,8 +689,7 @@ p{
 
 
 @media only screen and(max-width: 576px) {
-    .gridMenu{        
-                    
+    .gridMenu{                   
         .menu{
             .textoPropiedades{
                 @include propiedadesTexto("Ubuntu", 1.5vh);/* ejemplo de mixin*/
@@ -636,15 +697,37 @@ p{
         }   
     }
     .gridFooter{           
-           
         #textosFooter{        
             display: none;            
-        }
-         
+        }         
     }
     .gridBanner{
-        
         grid-template-columns: 95%;
         justify-content:space-around;
-    } 
+    }
+    .gridNosotros{        
+        #promoBoton{              
+            @include propiedadesTexto("ubuntu",3vh );
+            padding: 1vh 1vh 1vh 1vh;   
+        }
+    }
+    .gridPromo{           
+        #promoBoton{        
+            @include propiedadesTexto("ubuntu",3vh );
+            padding: 1vh 1vh 1vh 1vh;           
+        }                 
+    }
+    .gridServicios{        
+        #promoBoton{      
+            @include propiedadesTexto("ubuntu",3vh ); 
+            padding: 1vh 1vh 1vh 1vh;    
+        }                      
+    }
+    .gridContacto{       
+        #promoBoton{
+            @include propiedadesTexto("ubuntu",3vh ); 
+            padding: 1vh 1vh 1vh 1vh;
+        }   
+    }
+ 
 }
